@@ -9,6 +9,7 @@ public class ItemUpdaterFactory {
     private static final AgedBrieItemUpdater AGED_BRIE_ITEM_UPDATER = new AgedBrieItemUpdater();
     private static final SulfurasItemUpdater SULFURAS_ITEM_UPDATER = new SulfurasItemUpdater();
     private static final BackstagePassesItemUpdater BACKSTAGE_PASSES_ITEM_UPDATER = new BackstagePassesItemUpdater();
+    private static final ConjuredItemUpdater CONJURED_ITEM_UPDATER = new ConjuredItemUpdater();
 
     public static ItemUpdater getItemUpdaterFor(Item item) {
         if (item.name.equals("Aged Brie")) {
@@ -21,6 +22,10 @@ public class ItemUpdaterFactory {
 
         if (item.name.startsWith("Backstage passes")) {
             return BACKSTAGE_PASSES_ITEM_UPDATER;
+        }
+
+        if (item.name.startsWith("Conjured")) {
+            return CONJURED_ITEM_UPDATER;
         }
 
         return DEFAULT_ITEM_UPDATER;
