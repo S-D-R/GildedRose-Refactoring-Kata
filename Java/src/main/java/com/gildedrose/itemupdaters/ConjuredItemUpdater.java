@@ -12,7 +12,7 @@ public class ConjuredItemUpdater implements ItemUpdater {
 
         // Once the sell by date has passed, Quality degrades twice as fast
         if (item.sellIn < 0) {
-            item.quality -= 4;
+            item.quality -= 2;
         }
 
         // The Quality of an item is never negative
